@@ -437,24 +437,97 @@
         font-weight: 700;
       }
 
-      /* ── social proof ── */
-      .socialProof {
+      /* ── testimonials ── */
+      .testimonials {
         padding: 0 18px 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
       }
-      .socialProofLabel {
-        margin: 0 0 8px;
+      .testimonialsLabel {
+        margin: 0 0 10px;
         font-size: 11px;
         font-weight: 600;
         letter-spacing: 0.1em;
         text-transform: uppercase;
-        color: rgba(255, 255, 255, 0.3);
+        color: rgba(255, 255, 255, 0.28);
         text-align: center;
       }
-      .socialProof img {
-        width: 100%;
+      .review {
+        display: flex;
+        gap: 11px;
+        padding: 14px 14px;
         border-radius: 12px;
+        background: rgba(255, 255, 255, 0.025);
         border: 1px solid rgba(255, 255, 255, 0.07);
-        display: block;
+      }
+      .review + .review {
+        margin-top: 8px;
+      }
+      .reviewAvatar {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        font-weight: 800;
+        color: rgba(255,255,255,0.9);
+        background: linear-gradient(135deg, rgba(50,243,123,0.22) 0%, rgba(50,243,123,0.06) 100%);
+        border: 1px solid rgba(50, 243, 123, 0.22);
+      }
+      .reviewBody {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        min-width: 0;
+        flex: 1;
+      }
+      .reviewHeader {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+      }
+      .reviewMeta {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+      }
+      .reviewUser {
+        font-size: 12.5px;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.88);
+      }
+      .reviewTime {
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.3);
+      }
+      .reviewHeart {
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.18);
+        flex: 0 0 auto;
+      }
+      .reviewText {
+        font-size: 12.5px;
+        color: rgba(255, 255, 255, 0.68);
+        line-height: 1.5;
+      }
+      .reviewText strong {
+        color: rgba(50, 243, 123, 0.9);
+        font-weight: 700;
+      }
+      .reviewActions {
+        display: flex;
+        gap: 14px;
+        margin-top: 2px;
+      }
+      .reviewActions span {
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.25);
+        cursor: default;
       }
 
       /* ── guarantee ── */
@@ -678,9 +751,54 @@
           </a>
         </div>
 
-        <div class="socialProof">
-          <p class="socialProofLabel">O que estão falando</p>
-          <img src="images/provas%20sociais.png" alt="Comentários de clientes satisfeitos" loading="lazy">
+        <div class="testimonials">
+          <p class="testimonialsLabel">O que estão falando</p>
+
+          <div class="review">
+            <div class="reviewAvatar">CM</div>
+            <div class="reviewBody">
+              <div class="reviewHeader">
+                <div class="reviewMeta">
+                  <span class="reviewUser">carlos.mendes</span>
+                  <span class="reviewTime">2 d</span>
+                </div>
+                <span class="reviewHeart">♡</span>
+              </div>
+              <p class="reviewText">Já tinha gastado mais de R$ 120 em envelopinhos e meu filho ainda tava longe de completar. Comprei o pack, imprimimos em casa e em uma tarde o álbum ficou completo. 🙌🔥</p>
+              <div class="reviewActions"><span>Responder</span><span>Enviar</span></div>
+            </div>
+          </div>
+
+          <div class="review">
+            <div class="reviewAvatar">AF</div>
+            <div class="reviewBody">
+              <div class="reviewHeader">
+                <div class="reviewMeta">
+                  <span class="reviewUser">ana_ferreira12</span>
+                  <span class="reviewTime">4 d</span>
+                </div>
+                <span class="reviewHeart" style="color:rgba(220,60,60,0.7)">♥</span>
+              </div>
+              <p class="reviewText">Minha filha ficou frustrada porque só vinham repetidas. Por <strong>R$ 20,00</strong> veio tudo de uma vez, organizado, sem repetição. Não tem comparação. 😍</p>
+              <div class="reviewActions"><span>Responder</span><span>Enviar</span></div>
+            </div>
+          </div>
+
+          <div class="review">
+            <div class="reviewAvatar">RS</div>
+            <div class="reviewBody">
+              <div class="reviewHeader">
+                <div class="reviewMeta">
+                  <span class="reviewUser">roberto.silva99</span>
+                  <span class="reviewTime">1 sem</span>
+                </div>
+                <span class="reviewHeart">♡</span>
+              </div>
+              <p class="reviewText">Baixei, mandei imprimir na gráfica aqui perto e saiu perfeito. Meu neto ficou feliz e eu economizei muito. Recomendo para todo mundo! ⚽🏆</p>
+              <div class="reviewActions"><span>Responder</span><span>Enviar</span></div>
+            </div>
+          </div>
+
         </div>
 
         <div class="guarantee">
